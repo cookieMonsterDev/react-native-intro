@@ -10,11 +10,11 @@ import { useRouter } from "expo-router";
 import { COLORS, SIZES } from "../../../constants";
 import styles from "./popularjobs.style";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
+import useFetch from "../../../hooks/useFetch";
 
 const Popularjobs = () => {
   const router = useRouter();
-  const isLoading = false;
-  const error = false;
+  const {data, loading, error} = useFetch('search', {query: "React developer", num_pages: 1})
 
   return (
     <View style={styles.container}>
@@ -25,7 +25,7 @@ const Popularjobs = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.cardsContainer}>
-        {isLoading ? (
+        {loading ? (
           <ActivityIndicator size="large" colors={COLORS.primary} />
         ) : error ? (
           <Text>Something went wrong!</Text>
