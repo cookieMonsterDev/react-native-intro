@@ -1,4 +1,3 @@
-import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { checkImageURL } from "../../../../utils";
 import styles from "./popularjobcard.style";
