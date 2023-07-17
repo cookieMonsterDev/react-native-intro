@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { RAPID_API_KEY } from "@env";
 
-const useFetch = (endpoint, query) => {
+const useFetch = (endpoint, query, trigger = true) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -34,8 +34,8 @@ const useFetch = (endpoint, query) => {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    trigger && fetchData();
+  }, [trigger]);
 
   const refetch = () => {
     setLoading(true);
