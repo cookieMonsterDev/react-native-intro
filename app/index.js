@@ -24,9 +24,7 @@ const Home = () => {
           headerLeft: () => (
             <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
           ),
-          headerRight: () => (
-            <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
-          ),
+          headerRight: null,
           headerTitle: "",
         }}
       />
@@ -36,8 +34,8 @@ const Home = () => {
             search={search}
             setSearch={setSearch}
             handleClick={() => {
-              if (searchTerm) {
-                router.push(`/search/${searchTerm}`);
+              if (search) {
+                router.push(`/search/${search}`);
               }
             }}
           />
