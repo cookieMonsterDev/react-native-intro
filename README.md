@@ -1,14 +1,18 @@
-# Expo Router Example
+# React-native-intro
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+The simple job-search app for mobile devices. The app build on [JSearch](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch/) API.
 
-## 🚀 How to use
+## Quick Start
 
-```sh
-npx create-expo-app -e with-router
-```
-
-## 📝 Notes
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
+  1. Install dependencies
+  ```sh
+ npm install
+  ```
+  2. Add *.env* with provided your Rapid API key
+  ```sh
+  RAPID_API_KEY=your_key
+  ```
+  3. Run the app
+  ```sh
+  npm run start
+  ```
